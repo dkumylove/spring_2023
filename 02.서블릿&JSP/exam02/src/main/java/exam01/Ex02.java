@@ -11,7 +11,6 @@ public class Ex02 {
         System.out.println(b1);
 
         Book b2 = new Book("JSP2.3", "최범균", "가메출판사");
-
         System.out.println(b2);
 
          */
