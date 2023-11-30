@@ -17,5 +17,4 @@ public class Book {
     //@NonNull  //상수는 아니지만 값이 있어야 한다.
     private String author;
     private String publisher;
-
 }
