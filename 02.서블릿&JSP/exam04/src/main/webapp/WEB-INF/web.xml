@@ -20,5 +20,21 @@
         <servlet-name>board-servlet</servlet-name>
         <url-pattern>/board</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>login-servlet</servlet-name>
+        <servlet-class>servlets.LoginServlet</servlet-class>
+        <init-param>
+            <param-name>key1</param-name>
+            <param-value>value1</param-value>
+        </init-param>
+        <init-param>
+            <param-name>key2</param-name>
+            <param-value>value2</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>login-servlet</servlet-name>
+        <url-pattern>/member/login</url-pattern>
+    </servlet-mapping>
 
 </web-app>
