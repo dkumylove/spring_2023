@@ -1,5 +1,6 @@
 package servlets;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -14,6 +15,10 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("doGet()");
+
+        RequestDispatcher rd = req.getRequestDispatcher("//WEB-INF/templates/member/login.jsp");
+        rd.forward(req, resp);
+
     }
 
     @Override
