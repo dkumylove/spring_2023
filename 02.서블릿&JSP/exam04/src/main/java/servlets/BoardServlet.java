@@ -18,7 +18,7 @@ public class BoardServlet extends HttpServlet {
         //resp.setContentType("text/html");
         // 인코딩방식
         //resp.setCharacterEncoding("UTF-8");
-W
+
         PrintWriter out = resp.getWriter();
         // 바디에 출력되는 것
         out.println("<form method='post' action='/exam04/board'>");
