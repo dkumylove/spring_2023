@@ -7,6 +7,7 @@ public class Ex05 {
             int num2 = 0;
             int result = num1/ num2;  // throw new ArithmeticException();
         } catch (ArithmeticException e) { // = new ArithmeticException();
+            e.printStackTrace();
             System.out.println("예외처리");
         }
         System.out.println("매우 중요한 실행코드");
