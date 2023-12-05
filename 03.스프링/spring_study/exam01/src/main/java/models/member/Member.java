@@ -1,9 +1,11 @@
 package models.member;
 
-import java.time.LocalDate;
+import lombok.Builder;
+import lombok.Data;
+
 import java.time.LocalDateTime;
 
-
+@Data @Builder
 public class Member {
     private String userId;
     private String userPw;
