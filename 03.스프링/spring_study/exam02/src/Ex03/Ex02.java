@@ -15,11 +15,12 @@ public class Ex02 {
         for(Animal animal : animals) {
             animal.move();
 
-
+            // 객체 타입 확인
+            if(animal instanceof Human){
                 // 명시적 형변환
                 Human human = (Human)animal;
                 human.readBook();
-
+            }
         }
     }
 }
