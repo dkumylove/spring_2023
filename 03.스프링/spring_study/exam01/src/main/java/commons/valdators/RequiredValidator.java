@@ -9,7 +9,8 @@ public interface RequiredValidator {
 //        if (str == null || str.isBlank()) {
 //            throw e;
 //        }
-        if (StringUtils.hasText(str)) {
+        //
+        if (!StringUtils.hasText(str)) {
             throw e;
         }
     }
