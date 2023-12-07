@@ -1,5 +1,6 @@
 package models.member;
 
+import config.ManualBean;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -7,6 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@ManualBean
 @Repository
 public class MemberDao { // 빈이름 memberDao
     private static Map<String, Member> members = new HashMap<>();
