@@ -17,10 +17,10 @@ public class AppCtx3 {
         return new MemberDao();
     }
 
-    @Bean
+    /*@Bean
     public MemberDao memberDao2(){
         return new MemberDao();
-    }
+    }*/
 
     //@Bean
     public DateTimeFormatter formatter(){

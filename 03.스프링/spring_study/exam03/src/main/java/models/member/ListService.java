@@ -3,10 +3,12 @@ package models.member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.lang.Nullable;
+import org.springframework.stereotype.Service;
 
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+@Service
 public class ListService {
 
     private MemberDao memberDao;
@@ -21,7 +23,7 @@ public class ListService {
 
     @Autowired
     // setter를 통한 주입
-    public void setMemberDao(@Qualifier("memberDao") MemberDao memberDao){
+    public void setMemberDao(/*@Qualifier("memberDao")*/ MemberDao memberDao){
         this.memberDao = memberDao;
     }
 
