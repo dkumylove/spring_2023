@@ -7,7 +7,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
 
 @Configuration
-@ComponentScan(value = "models", excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classs = ManualBean.class))
+/*@ComponentScan(value = "models", excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = ManualBean.class))*/
+/*@ComponentScan(value = "models", excludeFilters = @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = MemberDao.class))*/
+@ComponentScan(value = "models", excludeFilters = @ComponentScan.Filter(type = FilterType.ASPECTJ, pattern = "models..*Dao"))//.. 하위패키지를 포함한 모든 패키지
 public class AppCtx {
 
     /*
