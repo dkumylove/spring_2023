@@ -12,7 +12,7 @@ public class ProxyCalculator implements Calculator {
         long stime = System.nanoTime();  // 공통기능
 
         try {
-            long result = calculator.factorial(num); // 핵심기능을 대신 수행
+            long result = calculator.factorial(num); // 핵심기능을 대신 수행함
 
             return result;
         } finally {
