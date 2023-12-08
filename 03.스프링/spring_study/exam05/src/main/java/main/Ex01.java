@@ -8,7 +8,7 @@ public class Ex01 {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppCtx.class);
 
-        Calculator cal = ctx.getBean(Calculator.class);     // Proxy 객체
+        Calculator cal = ctx.getBean(Calculator.class);   // Proxy 객체
         long result = cal.factorial(10L);
         System.out.printf("cal : %d%n", result);
 

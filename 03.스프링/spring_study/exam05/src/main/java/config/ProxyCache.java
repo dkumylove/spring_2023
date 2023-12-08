@@ -15,10 +15,7 @@ public class ProxyCache {
 
     private Map<Long, Object> cachDate = new HashMap<>();
 
-    @Pointcut("execution(* AOP..*(long))")
-    public void publicTarget() {}
-
-    @Around("publicTarget()")
+    @Around("config.CommonPointcut.publicTarget()")
     public Object process(ProceedingJoinPoint joinPoint) throws Throwable{
 
         Object[] args = joinPoint.getArgs();  // 매개변수로 투입된 인자 값 (ex - 10L)
@@ -28,7 +25,7 @@ public class ProxyCache {
             return cachDate.get(num);
         }
 
-        Object result = joinPoint.proceed();  //
+        Object result = joinPoint.proceed();   // ProxyCalculator::proceed()
 
         // 캐시저장
         cachDate.put(num, result);

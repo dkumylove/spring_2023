@@ -16,7 +16,8 @@ public class ProxyCalculator {
 
     // 범용적으로 사용되는 것이기 때문에 반환값이 어떤게 나올지 모르기떄문에 Object
     @Around("publicTarget()")*/
-    @Around("execution(* AOP..*(..))")
+    //@Around("execution(* AOP..*(..))")
+    @Around("config.CommonPointcut.publicTarget()")
     public Object process(ProceedingJoinPoint joinPoint) throws Throwable {
         //System.out.println("프로시");
 
