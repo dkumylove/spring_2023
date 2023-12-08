@@ -12,8 +12,13 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 public class AppCtx {
 
     @Bean
-    public Calculator calculator() {
+    public RecCalculator calculator() {
         return new RecCalculator();
+    }
+
+    @Bean
+    public ProxyCache proxyCache() {
+        return new ProxyCache();
     }
 
     @Bean
