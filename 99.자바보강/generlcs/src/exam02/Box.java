@@ -1,7 +1,7 @@
 package exam02;
 
 public class Box<T extends Fruit> {
-    private T item;
+    private T item;     // Object
 
     //private static T item2;
     //private  T[] item3= new T[];
