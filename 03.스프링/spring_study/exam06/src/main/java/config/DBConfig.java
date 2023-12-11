@@ -1,9 +1,13 @@
 package config;
 
+import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.tomcat.jdbc.pool.DataSource;
+import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
 
 @Configuration
 public class DBConfig {
@@ -28,5 +32,18 @@ public class DBConfig {
     @Bean
     public JdbcTemplate jdbcTemplate() {
         return  new JdbcTemplate(dataSource());
+    }
+
+    @Bean
+    public SqlSessionFactory splSessionFactory() throws Exception{
+        SqlSessionFactoryBean sessionFactoryBean = new SqlSessionFactoryBean();
+
+        return  sessionFactoryBean.getObject();
+    }
+
+    @Bean
+    public PlatformTransactionManager transactionManager() {
+        DataSourceTransactionManager tm = new DataSourceTransactionManager(dataSource());
+        return tm;
     }
 }

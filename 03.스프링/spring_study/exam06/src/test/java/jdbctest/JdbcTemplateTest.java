@@ -15,6 +15,7 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -24,6 +25,7 @@ import java.util.List;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = AppCtx.class)
+@Transactional
 public class JdbcTemplateTest {
 
     @Autowired
@@ -44,6 +46,7 @@ public class JdbcTemplateTest {
 
     @Test
     @DisplayName("INSERT테스트")
+    @Transactional
     void insertTest() {
         //DataAccessException - RuntimeException - 예외처리 x -> 실행
         String sql = "INSERT INTO MEMBER(USER_NO, USER_ID, USER_PW, USER_NM, EMAIL) VALUES(SEQ_MEMBER.NEXTVAL, ?, ?, ?, ?)";
@@ -115,6 +118,5 @@ public class JdbcTemplateTest {
                 .regDt(rs.getTimestamp("REG_DT").toLocalDateTime())
                 .build();
     }
-
 
 }
