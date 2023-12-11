@@ -24,8 +24,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = AppCtx.class)
-@Transactional
+@ContextConfiguration(classes= AppCtx.class)
 public class JdbcTemplateTest {
 
     @Autowired
@@ -35,23 +34,26 @@ public class JdbcTemplateTest {
     private JdbcTemplate jdbcTemplate;
 
     @Test
-    @DisplayName("DataSource를 통한 DB연결 테스트")
-    void connectionTest(){
-        try (Connection conn = dataSource.getConnection()){
-            System.out.println("conn : " + conn);
+    @DisplayName("DataSource를 통한 DB 연결 테스트")
+    void connectionTest() {
+        try (Connection conn = dataSource.getConnection()) {
+            System.out.println(conn);
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
     @Test
-    @DisplayName("INSERT테스트")
-    @Transactional
+    @DisplayName("INSERT 테스트")
     void insertTest() {
-        //DataAccessException - RuntimeException - 예외처리 x -> 실행
-        String sql = "INSERT INTO MEMBER(USER_NO, USER_ID, USER_PW, USER_NM, EMAIL) VALUES(SEQ_MEMBER.NEXTVAL, ?, ?, ?, ?)";
+        // DataAccessException - RuntimeException - 예외처리 X -> 실행
 
-        int affectedRows = jdbcTemplate.update(sql, "USER100", "123456", "사용자100", "user100@test.org");
+        String sql = "INSERT INTO MEMBER (USER_NO, USER_ID, USER_PW, USER_NM, EMAIL) " +
+                " VALUES (SEQ_MEMBER.nextval, ?, ?, ?, ?)";
+        int affectedRows = jdbcTemplate.update(sql,
+                "USER101", "123456", "사용자101", "user101@test.org");
+
         System.out.println(affectedRows);
     }
 
@@ -60,15 +62,15 @@ public class JdbcTemplateTest {
     void insertTest2() {
         KeyHolder keyHolder = new GeneratedKeyHolder();
         int affectedRows = jdbcTemplate.update(con -> {
-                String sql = "INSERT INTO MEMBER (USER_NO, USER_ID, USER_PW, USER_NM, EMAIL) VALUES (SEQ_MEMBER.nextval, ?, ?, ?, ?)";
-                PreparedStatement pstmt = con.prepareStatement(sql, new String[] {"USER_NO"});
+            String sql = "INSERT INTO MEMBER (USER_NO, USER_ID, USER_PW, USER_NM, EMAIL) VALUES (SEQ_MEMBER.nextval, ?, ?, ?, ?)";
+            PreparedStatement pstmt = con.prepareStatement(sql, new String[] {"USER_NO"});
 
-                pstmt.setString(1, "USER199");
-                pstmt.setString(2, "123456");
-                pstmt.setString(3, "사용자199");
-                pstmt.setString(4, "user199@test.org");
+            pstmt.setString(1, "USER199");
+            pstmt.setString(2, "123456");
+            pstmt.setString(3, "사용자199");
+            pstmt.setString(4, "user199@test.org");
 
-                return pstmt;
+            return pstmt;
 
         }, keyHolder);
 
@@ -77,25 +79,26 @@ public class JdbcTemplateTest {
     }
 
     @Test
-    @DisplayName("목록출력테스트")
+    @DisplayName("목록 출력 테스트")
     void selectTest() {
         String sql = "SELECT * FROM MEMBER";
+
         List<Member> members = jdbcTemplate.query(sql, this::mapper);
 
         for (Member member : members) {
-            System.out.println("member : " + member);
+            System.out.println(member);
         }
     }
 
     @Test
-    @DisplayName("단일조회테스트")
+    @DisplayName("단일 조회 테스트")
     void selectTest2() {
         String userId = "_USER99";
         String sql = "SELECT * FROM MEMBER WHERE USER_ID = ?";
 
         try {
-            Member members = jdbcTemplate.queryForObject(sql, this::mapper, userId);
-            System.out.println("members : " + members);
+            Member member = jdbcTemplate.queryForObject(sql, this::mapper, userId);
+            System.out.println(member);
         } catch (DataAccessException e) {
             System.out.println("조회된 데이터 없음");
         }
@@ -103,14 +106,15 @@ public class JdbcTemplateTest {
 
     @Test
     @DisplayName("통계 데이터 조회")
-    void selectTest3(){
+    void selectTest3() {
         String sql = "SELECT COUNT(*) FROM MEMBER";
         long total = jdbcTemplate.queryForObject(sql, long.class);
-        System.out.println("total : " + total);
+        System.out.println(total);
     }
 
     private Member mapper(ResultSet rs, int i) throws SQLException {
-        return Member.builder().userNo(rs.getLong("USER_NO"))
+        return Member.builder()
+                .userNo(rs.getLong("USER_NO"))
                 .userId(rs.getString("USER_ID"))
                 .userPw(rs.getString("USER_PW"))
                 .userNm(rs.getString("USER_NM"))
@@ -118,5 +122,4 @@ public class JdbcTemplateTest {
                 .regDt(rs.getTimestamp("REG_DT").toLocalDateTime())
                 .build();
     }
-
 }

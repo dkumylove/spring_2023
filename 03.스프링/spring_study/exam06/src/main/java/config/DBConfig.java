@@ -3,13 +3,17 @@ package config;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 
+import javax.management.MXBean;
+
 @Configuration
+@MapperScan("mapper")
 public class DBConfig {
 
     @Bean(destroyMethod = "close")
@@ -37,7 +41,7 @@ public class DBConfig {
     @Bean
     public SqlSessionFactory splSessionFactory() throws Exception{
         SqlSessionFactoryBean sessionFactoryBean = new SqlSessionFactoryBean();
-
+        sessionFactoryBean.setDataSource(dataSource());
         return  sessionFactoryBean.getObject();
     }
 

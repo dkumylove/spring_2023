@@ -8,6 +8,15 @@ public class Ex02 {
             }
         };
 
+        add(cal);
+
+        add(new Calculator() {
+            @Override
+            public int add(int num1, int num2) {
+                return 0;
+            }
+        });
+
         add((a, b) -> a + b);
     }
 
