@@ -48,21 +48,30 @@ public class JdbcTemplateTest {
     }
 
     @Test
+    @DisplayName("INSERT 후 시퀀스 번호 추출")
+    void insertTest2() {
+        int affect
+    }
+
+    @Test
     @DisplayName("목록출력테스트")
     void selectTest() {
         String sql = "SELECT * FROM MEMBER";
-        List<Member> members = jdbcTemplate.query(sql, ( rs,  i) -> Member.builder()
-                                    .userNo(rs.getLong("USER_NO"))
-                                    .userId(rs.getString("USER_ID"))
-                                    .userPw(rs.getString("USER_PW"))
-                                    .userNm(rs.getString("USER_NM"))
-                                    .email(rs.getString("EMAIL"))
-                                    .regDt(rs.getTimestamp("REG_DT").toLocalDateTime())
-                                    .build());
+        List<Member> members = jdbcTemplate.query(sql, this::mapper);
 
         for (Member member : members) {
             System.out.println(member);
         }
+    }
+
+    private Member mapper(ResultSet rs, int i) throws SQLException {
+        return Member.builder().userNo(rs.getLong("USER_NO"))
+                .userId(rs.getString("USER_ID"))
+                .userPw(rs.getString("USER_PW"))
+                .userNm(rs.getString("USER_NM"))
+                .email(rs.getString("EMAIL"))
+                .regDt(rs.getTimestamp("REG_DT").toLocalDateTime())
+                .build();
     }
 
 
