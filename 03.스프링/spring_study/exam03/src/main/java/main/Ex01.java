@@ -7,6 +7,7 @@ import models.member.JoinService;
 import models.member.ListService;
 import models.member.Member;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
 
 import java.time.LocalDateTime;
 
@@ -31,5 +32,7 @@ public class Ex01 {
         listService.print();
 
         ctx.close();
+
+        GenericXmlApplicationContext
     }
 }
