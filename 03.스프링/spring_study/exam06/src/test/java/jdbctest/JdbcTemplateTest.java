@@ -8,11 +8,15 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
@@ -50,7 +54,24 @@ public class JdbcTemplateTest {
     @Test
     @DisplayName("INSERT 후 시퀀스 번호 추출")
     void insertTest2() {
-        int affect
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+        int affectedRows = jdbcTemplate.update(new PreparedStatementCreator() {
+            @Override
+            public PreparedStatement createPreparedStatement(Connection con) throws SQLException {
+                String sql = "INSERT INTO MEMBER (USER_NO, USER_ID, USER_PW, USER_NM, EMAIL) VALUES (SEQ_MEMBER.nextval, ?, ?, ?, ?)";
+                PreparedStatement pstmt = con.prepareStatement(sql, new String[] {"USER_NO"});
+
+                pstmt.setString(1, "USER199");
+                pstmt.setString(2, "123456");
+                pstmt.setString(3, "사용자199");
+                pstmt.setString(4, "user199@test.org");
+
+                return pstmt;
+            }
+        }, keyHolder);
+
+        long userNo = keyHolder.getKey().longValue();
+        System.out.println("userNo : " + userNo);
     }
 
     @Test
