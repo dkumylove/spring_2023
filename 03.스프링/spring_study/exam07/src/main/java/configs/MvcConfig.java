@@ -54,17 +54,17 @@ public class MvcConfig implements WebMvcConfigurer {
     public SpringTemplateEngine templateEngine() {
         SpringTemplateEngine templateEngine = new SpringTemplateEngine();
         templateEngine.setTemplateResolver(templateResolver());
-        templateEngine.setEnableSpringELCompiler(true);
-        templateEngine.addDialect(new Java8TimeDialect());
-        templateEngine.addDialect(new LayoutDialect());
+        templateEngine.setEnableSpringELCompiler(true);  // EL식
+        templateEngine.addDialect(new Java8TimeDialect());   // 확장기능 : Date Time API(java.time 패키지) - #temporals
+        templateEngine.addDialect(new LayoutDialect());    // 확장기능 : 레이이웃기능
         return templateEngine;
     }
 
     @Bean
     public ThymeleafViewResolver thymeleafViewResolver() {
         ThymeleafViewResolver resolver = new ThymeleafViewResolver();
-        resolver.setContentType("text/html");
-        resolver.setCharacterEncoding("utf-8");
+        resolver.setContentType("text/html");    // 컨텐츠의 유형
+        resolver.setCharacterEncoding("utf-8");     // 언어 종류
         resolver.setTemplateEngine(templateEngine());
         return resolver;
     }
