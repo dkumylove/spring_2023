@@ -2,7 +2,7 @@ package exam01;
 
 import java.util.ArrayList;
 
-public class Ex02 {
+public class Ex02_ArrayList {
     public static void main(String[] args) {
         ArrayList<String> names = new ArrayList<>();
 
@@ -15,9 +15,15 @@ public class Ex02 {
         //System.out.println("names : " + names);
 
         // 삭제하기
+        for(int i = names.size() - 1; i >= 0 ; i--){
+            String name = names.remove(i);
+            System.out.println("name : " + name);
+        }
+        /*
         for(int i = 0; i < names.size(); i++){
             names.remove(i);
         }
+        */
 
         // 조회하기
         for(int i = 0; i < names.size(); i++){
