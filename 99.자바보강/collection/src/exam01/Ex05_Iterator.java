@@ -3,7 +3,7 @@ package exam01;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Ex05 {
+public class Ex05_Iterator {
     public static void main(String[] args) {
         ArrayList<String> names = new ArrayList<>();
 
