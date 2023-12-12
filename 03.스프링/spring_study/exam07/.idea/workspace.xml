@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6160fec9-002a-465e-b2b4-ecbddd0e3600" name="Changes" comment="231212 1 교시 - DispatcherServlet 기본 연결관계">
+    <list default="true" id="6160fec9-002a-465e-b2b4-ecbddd0e3600" name="Changes" comment="231212 3 교시 - Mapping, Adapter, View">
+      <change beforePath="$PROJECT_DIR$/../exam04/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exam04/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exam04/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exam04/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/configs/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configs/MvcConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/hello.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/hello.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
@@ -68,6 +69,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Gradle.Download Sources.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Smart Tomcat.TOMCAT10.executor": "Run",
@@ -127,7 +129,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702339736248</updated>
-      <workItem from="1702340435236" duration="9533000" />
+      <workItem from="1702340435236" duration="14103000" />
     </task>
     <task id="LOCAL-00001" summary="-">
       <option name="closed" value="true" />
@@ -177,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702346872409</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="231212 3 교시 - Mapping, Adapter, View">
+      <option name="closed" value="true" />
+      <created>1702350027298</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702350027298</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +197,7 @@
     <MESSAGE value="231212 1 교시 - 새프로젝트 설정" />
     <MESSAGE value="-" />
     <MESSAGE value="231212 1 교시 - DispatcherServlet 기본 연결관계" />
-    <option name="LAST_COMMIT_MESSAGE" value="231212 1 교시 - DispatcherServlet 기본 연결관계" />
+    <MESSAGE value="231212 3 교시 - Mapping, Adapter, View" />
+    <option name="LAST_COMMIT_MESSAGE" value="231212 3 교시 - Mapping, Adapter, View" />
   </component>
 </project>

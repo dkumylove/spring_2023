@@ -1,6 +1,11 @@
 package controllers;
 
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -9,11 +14,23 @@ import org.springframework.web.servlet.ModelAndView;
 public class HelloController {
 
     @GetMapping("/hello")
-    public String hello(@RequestParam("name") String name, @RequestParam("num") int num){
-        System.out.println("name : " + name + ", num : " + num);
-        return "hello";   // /WEB-INF/templates/hello.jsp
+    public String hello(@RequestParam("name") String nm, Model model) {
+        model.addAttribute("name", nm);
+
+        return "hello";
     }
 
+    /*
+    @GetMapping("/hello")
+    //public String hello(@RequestParam("name") String name, @RequestParam("num") int num){
+    public String hello(HttpServletRequest request, HttpServletResponse response, HttpSession session){
+        System.out.println("=====request : " + request);
+        System.out.println("=====response : " + response);
+        System.out.println("=====session : " + session);
+        //System.out.println("name : " + name + ", num : " + num);
+        return "hello";   // /WEB-INF/templates/hello.jsp
+    }
+    */
     /*
     @GetMapping("/hello")
     public ModelAndView hello() {
