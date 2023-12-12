@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6160fec9-002a-465e-b2b4-ecbddd0e3600" name="Changes" comment="231212 5 교시 - Mapping, Adapter, View">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/member/MemberController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/member/RequestJoin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/member/RequestLogin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/member/join.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/member/login.jsp" afterDir="false" />
+    <list default="true" id="6160fec9-002a-465e-b2b4-ecbddd0e3600" name="Changes" comment="231212 5 교시 - join/ login">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/configs/ControllerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configs/ControllerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/hello.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/hello.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/configs/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configs/MvcConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +128,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702339736248</updated>
-      <workItem from="1702340435236" duration="17844000" />
+      <workItem from="1702340435236" duration="21324000" />
     </task>
     <task id="LOCAL-00001" summary="-">
       <option name="closed" value="true" />
@@ -199,7 +194,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702357305627</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="231212 5 교시 - join/ login">
+      <option name="closed" value="true" />
+      <created>1702360851741</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702360851741</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +214,7 @@
     <MESSAGE value="231212 1 교시 - DispatcherServlet 기본 연결관계" />
     <MESSAGE value="231212 3 교시 - Mapping, Adapter, View" />
     <MESSAGE value="231212 4 교시 - Mapping, Adapter, View" />
-    <option name="LAST_COMMIT_MESSAGE" value="231212 4 교시 - Mapping, Adapter, View" />
+    <MESSAGE value="231212 5 교시 - join/ login" />
+    <option name="LAST_COMMIT_MESSAGE" value="231212 5 교시 - join/ login" />
   </component>
 </project>
