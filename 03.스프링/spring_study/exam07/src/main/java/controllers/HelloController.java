@@ -14,8 +14,9 @@ import org.springframework.web.servlet.ModelAndView;
 public class HelloController {
 
     @GetMapping("/hello")
-    public String hello(@RequestParam("name") String nm, Model model) {
+    public String hello(@RequestParam(value = "name", defaultValue = "기본값") String nm, @RequestParam(value = "name2", required = false) String nm2, Model model) {
         model.addAttribute("name", nm);
+        model.addAttribute("name2", nm2);
 
         return "hello";
     }
