@@ -14,6 +14,7 @@ public class MvcConfig implements WebMvcConfigurer {
         configurer.enable();
     }
 
+    // View 객체를 찾는 역할을 함
     @Override
     public void configureViewResolvers(ViewResolverRegistry registry) {
         registry.jsp("/WEB-INF/templates/", ".jsp");

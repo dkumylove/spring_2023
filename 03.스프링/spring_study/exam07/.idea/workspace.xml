@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6160fec9-002a-465e-b2b4-ecbddd0e3600" name="Changes" comment="231212 1 교시 - 새프로젝트 설정">
-      <change afterPath="$PROJECT_DIR$/src/main/java/configs/ControllerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/configs/MvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/hello.jsp" afterDir="false" />
+    <list default="true" id="6160fec9-002a-465e-b2b4-ecbddd0e3600" name="Changes" comment="231212 1 교시 - DispatcherServlet 기본 연결관계">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/configs/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configs/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/hello.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/hello.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +48,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -64,6 +70,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Smart Tomcat.TOMCAT10.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/app/spring/03.스프링/spring_study/exam07",
@@ -72,7 +79,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "File.Encoding",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -120,7 +127,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702339736248</updated>
-      <workItem from="1702340435236" duration="6328000" />
+      <workItem from="1702340435236" duration="9533000" />
     </task>
     <task id="LOCAL-00001" summary="-">
       <option name="closed" value="true" />
@@ -154,15 +161,32 @@
       <option name="project" value="LOCAL" />
       <updated>1702343302615</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="-">
+      <option name="closed" value="true" />
+      <created>1702346797497</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702346797497</updated>
+    </task>
+    <task id="LOCAL-00006" summary="231212 1 교시 - DispatcherServlet 기본 연결관계">
+      <option name="closed" value="true" />
+      <created>1702346872409</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702346872409</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="-" />
     <MESSAGE value="231212 1 교시 - 새프로젝트 설정" />
-    <option name="LAST_COMMIT_MESSAGE" value="231212 1 교시 - 새프로젝트 설정" />
+    <MESSAGE value="-" />
+    <MESSAGE value="231212 1 교시 - DispatcherServlet 기본 연결관계" />
+    <option name="LAST_COMMIT_MESSAGE" value="231212 1 교시 - DispatcherServlet 기본 연결관계" />
   </component>
 </project>
