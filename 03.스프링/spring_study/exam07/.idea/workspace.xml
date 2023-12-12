@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6160fec9-002a-465e-b2b4-ecbddd0e3600" name="Changes" comment="231212 6 교시 - Thymeleaf 설정">
-      <change afterPath="$PROJECT_DIR$/../../../99.자바보강/collection/src/exam01/Ex06_ListIterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../99.자바보강/collection/src/exam01/Ex07.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../99.자바보강/collection/src/exam02/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../99.자바보강/collection/src/exam02/Ex01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../99.자바보강/collection/src/exam02/Ex02.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../99.자바보강/collection/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../99.자바보강/collection/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../99.자바보강/collection/src/exam01/Ex05.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../99.자바보강/collection/src/exam01/Ex05_Iterator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +73,7 @@
     "Smart Tomcat.TOMCAT10.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/app/spring/03.스프링/spring_study/exam07",
+    "last_opened_file_path": "C:/app/spring",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -98,9 +93,6 @@
       <option name="catalinaBase" value="C:\Users\dkumy\.SmartTomcat\exam07\exam07.main" />
       <option name="contextPath" value="/exam07" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
-      <option name="envOptions">
-        <map />
-      </option>
       <option name="extraClassPath" value="" />
       <option name="port" value="3000" />
       <option name="tomcatInfo">
@@ -132,7 +124,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702339736248</updated>
-      <workItem from="1702340435236" duration="23202000" />
+      <workItem from="1702340435236" duration="23207000" />
+      <workItem from="1702376004061" duration="2406000" />
+      <workItem from="1702380998413" duration="2487000" />
     </task>
     <task id="LOCAL-00001" summary="-">
       <option name="closed" value="true" />
