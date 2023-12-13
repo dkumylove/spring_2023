@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31c43404-7a7e-48e7-8250-97907f0dfcff" name="Changes" comment="231212 자바보강 - 컬랙션 List/ Set">
-      <change beforePath="$PROJECT_DIR$/../../03.스프링/spring_study/exam07/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../03.스프링/spring_study/exam07/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam03/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam03/Ex01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam03/Ex02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam03/Ex03.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03.스프링/spring_study/exam01/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../03.스프링/spring_study/exam01/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03.스프링/spring_study/exam03/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../03.스프링/spring_study/exam03/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03.스프링/spring_study/exam05/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../03.스프링/spring_study/exam05/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exam02/Ex01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam02/Ex01.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +49,8 @@
     "Application.Ex05.executor": "Run",
     "Application.Ex06.executor": "Run",
     "Application.Ex07.executor": "Run",
+    "Application.exam03.Ex01.executor": "Run",
+    "Application.exam03.Ex02.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -55,7 +64,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Ex02">
+  <component name="RunManager" selected="Application.Ex03">
     <configuration name="Ex01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="exam02.Ex01" />
       <module name="collection" />
@@ -82,12 +91,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ex05" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="exam01.Ex05" />
+    <configuration name="Ex03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exam03.Ex03" />
       <module name="collection" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="exam01.*" />
+          <option name="PATTERN" value="exam03.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,12 +104,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ex06" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="exam01.Ex06" />
+    <configuration name="exam03.Ex01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exam03.Ex01" />
       <module name="collection" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="exam01.*" />
+          <option name="PATTERN" value="exam03.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,12 +117,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ex07" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="exam01.Ex07" />
+    <configuration name="exam03.Ex02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exam03.Ex02" />
       <module name="collection" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="exam01.*" />
+          <option name="PATTERN" value="exam03.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Ex02" />
+        <item itemvalue="Application.Ex03" />
+        <item itemvalue="Application.exam03.Ex01" />
         <item itemvalue="Application.Ex01" />
-        <item itemvalue="Application.Ex07" />
-        <item itemvalue="Application.Ex06" />
-        <item itemvalue="Application.Ex05" />
+        <item itemvalue="Application.exam03.Ex02" />
+        <item itemvalue="Application.Ex02" />
       </list>
     </recent_temporary>
   </component>
@@ -148,6 +157,7 @@
       <updated>1702284657852</updated>
       <workItem from="1702284658904" duration="3249000" />
       <workItem from="1702366424194" duration="8253000" />
+      <workItem from="1702426233209" duration="5379000" />
     </task>
     <task id="LOCAL-00001" summary="231211 자바보강 - 컬랙션">
       <option name="closed" value="true" />
