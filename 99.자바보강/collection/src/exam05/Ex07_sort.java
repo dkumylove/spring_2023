@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class Ex07 {
+public class Ex07_sort {
     public static void main(String[] args) {
         List<String> names = new ArrayList<>();
         names.add("이름2");

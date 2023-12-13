@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
-public class Ex06 {
+public class Ex06_addAll_shuffle_maxmin {
     public static void main(String[] args) {
         List<String> strs = new ArrayList<>();
 

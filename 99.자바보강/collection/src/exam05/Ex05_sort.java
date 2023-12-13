@@ -3,7 +3,7 @@ package exam05;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class Ex05 {
+public class Ex05_sort {
     public static void main(String[] args) {
         Integer[] nums =  {10, 3, 5, 33, 19, 25};
         //Arrays.sort(nums);  //Comparable 기본 정렬기준 - 오름차순 int[]
