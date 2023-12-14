@@ -20,15 +20,24 @@
                         <th:block th:text="${status.count}"></th:block>
                         [<th:block th:text="${status.first}"></th:block>]
                         [<th:block th:text="${status.last}"></th:block>]
+                        <!--
                         <span th:if="${status.even}">짝수</span>
-                        <span th:if="${status.odd}">짝수</span>
+                        <span th:unless="${status.even}">홀수</span>
+                        -->
+                        <th:block th:switch="${status.even}">
+                            <span th:case="true">짝수</span>
+                            <span th:case="false">홀수</span>
+                        </th:block>
                     </td>
                     <td th:text="*{userId}"></td>
                     <td th:text="*{userNm}"></td>
                     <td th:text="*{email}"></td>
-                    <td th:text="*{regDt}"></td>
+                    <td th:text="*{#temporals.format(regDt, 'yyyy.MM.dd HH:mm')}"></td>
                 </tr>
             </tbody>
         </table>
+        <th:block th:each="num : ${#numbers.sequence(1,10)}">
+            <h2 th:text="${num}"></h2>
+        </th:block>
     </body>
 </html>
