@@ -6,7 +6,7 @@
     </head>
     <body>
         <section th:object="${member}">
-        <h1>회원가입</h1>
+        <h1 th:text="${pageTitle}">회원가입</h1>
         <a href="@{/member/login(userId=*{userId}, userNm=*{userNm)}">로그인</a>
 
         <a th:href="@{/member/info/{id}(id=*{userId})}">회원정보</a>
@@ -16,7 +16,7 @@
         </dl>
         <dl>
             <dt th:text="#{회원명}"></dt>
-            <dd th:text="*{userNm}">이름</dd>
+            <dd th:utext="*{userNm}">이름</dd>
         </dl>
         </section>
     </body>
