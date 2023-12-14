@@ -3,7 +3,6 @@ package exam01;
 import java.util.Arrays;
 import java.util.List;
 
-
 public class Ex01 {
     public static void main(String[] args) {
         String[] words = {"aaa", "aa", "bbb", "ccc", "cc", "abc", "asdf"};
