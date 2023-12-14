@@ -1,24 +1,11 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <meta charset="UTF-8">
-        <title>회원가입</title>
-    </head>
-    <body>
-        <th:block th:object="${member}">
-        <h1 th:text="${pageTitle}"></h1>
-            <div th:utext="*{#messages.msg('LOGIN_MSG', userNm, userId)}"></div>
-        <a href="@{/member/login(userId=*{userId}, userNm=*{userNm)}">로그인</a>
+<!DODTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/common}">
 
-        <a th:href="@{/member/info/{id}(id=*{userId})}">회원정보</a>
-        <dl>
-            <dt th:text="#{아이디}"></dt>
-            <dd th:text="*{@utils.toUpper(userId))}">user100</dd>
-        </dl>
-        <dl>
-            <dt th:text="#{회원명}"></dt>
-            <dd th:utext="*{userNm}">이름</dd>
-        </dl>
-        </th:block>
-    </body>
+<main layout:fragment="content">
+
+    <h1>회원가입</h1>
+
+</main>
 </html>
