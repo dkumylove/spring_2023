@@ -14,5 +14,4 @@ public class RequestJoin {
     private String email;
 
     private boolean agree;
-    private LocalDateTime regDt;
 }
