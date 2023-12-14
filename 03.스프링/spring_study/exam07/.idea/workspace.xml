@@ -4,15 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6160fec9-002a-465e-b2b4-ecbddd0e3600" name="Changes" comment="231212 6 교시 - Thymeleaf 설정">
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/member/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/commons.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="6160fec9-002a-465e-b2b4-ecbddd0e3600" name="Changes" comment="231213 1 교시 - Thymeleaf 설정">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/commons_en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam07_1/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam07_1/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam07_1/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam07_1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam07_1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam07_1/src/main/java/configs/ControllerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam07_1/src/main/java/configs/MvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam07_1/src/main/java/controllers/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam07_1/src/main/java/controllers/member/MemberController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam07_1/src/main/java/controllers/member/RequestJoin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam07_1/src/main/java/controllers/member/RequestLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam07_1/src/main/java/models/member/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam07_1/src/main/resources/messages/commons.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam07_1/src/main/resources/messages/commons_en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam07_1/src/main/resources/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam07_1/src/main/webapp/WEB-INF/templates/hello.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam07_1/src/main/webapp/WEB-INF/templates/member/join.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam07_1/src/main/webapp/WEB-INF/templates/member/join.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam07_1/src/main/webapp/WEB-INF/templates/member/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam07_1/src/main/webapp/WEB-INF/templates/member/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam07_1/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exam07_1/src/main/webapp/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/configs/ControllerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configs/ControllerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/configs/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configs/MvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/member/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/member/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/member/RequestJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/member/RequestJoin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages/commons.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages/commons.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/member/join.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/member/join.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,12 +99,15 @@
     &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/app/spring_m/exam07&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/app/spring/03.스프링/spring_study/exam07&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -135,6 +157,8 @@
       <workItem from="1702376004061" duration="2406000" />
       <workItem from="1702380998413" duration="2487000" />
       <workItem from="1702512093266" duration="4073000" />
+      <workItem from="1702516279082" duration="3453000" />
+      <workItem from="1702520168128" duration="83000" />
     </task>
     <task id="LOCAL-00001" summary="-">
       <option name="closed" value="true" />
@@ -224,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702366386906</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="231213 1 교시 - Thymeleaf 설정">
+      <option name="closed" value="true" />
+      <created>1702516600739</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1702516600739</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +281,7 @@
     <MESSAGE value="231212 4 교시 - Mapping, Adapter, View" />
     <MESSAGE value="231212 5 교시 - join/ login" />
     <MESSAGE value="231212 6 교시 - Thymeleaf 설정" />
-    <option name="LAST_COMMIT_MESSAGE" value="231212 6 교시 - Thymeleaf 설정" />
+    <MESSAGE value="231213 1 교시 - Thymeleaf 설정" />
+    <option name="LAST_COMMIT_MESSAGE" value="231213 1 교시 - Thymeleaf 설정" />
   </component>
 </project>
