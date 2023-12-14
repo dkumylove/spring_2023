@@ -16,6 +16,5 @@ public class Ex10 {
         //BiPredicate<String, String> func3 = (s1, s2) -> s1.equals(s2); // 매개변수의 순서가 같아야 참조 가능
         //BiPredicate<String, String> func3 = (s1, s2) -> s2.equals(s1); // 이때는 참조가 불가능하다.
         BiPredicate<String, String> func3 = String::equals;
-
     }
 }
