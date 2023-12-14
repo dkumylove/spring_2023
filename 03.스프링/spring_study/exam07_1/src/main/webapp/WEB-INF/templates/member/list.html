@@ -30,12 +30,13 @@
                         </th:block>
                     </td>
                     <td th:text="*{userId}"></td>
-                    <td th:text="*{userNm}"></td>
+                    <td th:text="*{#strings.concat(userNm, '(' + userId + ')' )}"></td>
                     <td th:text="*{email}"></td>
                     <td th:text="*{#temporals.format(regDt, 'yyyy.MM.dd HH:mm')}"></td>
                 </tr>
             </tbody>
         </table>
+        <div th:text="${#numbers.formatInteger(100000000, 3, 'COMMA')}"></div>
         <th:block th:each="num : ${#numbers.sequence(1,10)}">
             <h2 th:text="${num}"></h2>
         </th:block>

@@ -1,5 +1,6 @@
 package configs;
 
+import commons.Utils;
 import nz.net.ultraq.thymeleaf.layoutdialect.LayoutDialect;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -35,7 +36,15 @@ public class MvcConfig implements WebMvcConfigurer {
         // "/**" Ant 경로 패턴 : 기본경로의 하위 폴더를 포함한 모든 하위 폴더
     }
 
-//    @Override
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        // 컨트롤러 없이 view 페이지로 이동
+        registry.addViewController("/")
+                .setViewName("main/index");
+
+    }
+
+    //    @Override
 //    public void configureViewResolvers(ViewResolverRegistry registry) {
 //        registry.jsp("/WEB-INF/templates/", ".jsp");
 //        // View 객체를 찾기 위한 url완성 /WEB-INF/templates/ +   + .jsp
@@ -85,5 +94,10 @@ public class MvcConfig implements WebMvcConfigurer {
         ms.setBasenames("messages.commons");
 
         return ms;
+    }
+
+    @Bean
+    public Utils utils() {
+        return new Utils();
     }
 }
