@@ -3,6 +3,7 @@ package controllers.member;
 import models.member.Member;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
@@ -13,6 +14,11 @@ import java.util.List;
 @Controller
 @RequestMapping("/member")
 public class MemberController {
+
+    @ModelAttribute("hobbies")
+    public List<String> hobbies() {
+        return Arrays.asList("자바", "오라클", "JSP", "스프링");
+    }
 
     @GetMapping("/join") // = /member/join
     //@RequestMapping(method = {RequestMethod.GET, RequestMethod.POST}, path="/member/join")
@@ -42,19 +48,25 @@ public class MemberController {
         model.addAttribute("pageTitle", "회원가입");
         */
 
-        return "member/join";
+        return "/member/join";
     }
 
     @PostMapping("/join")  // = /member/join
     public String joinPs(RequestJoin form, Model model) {
+
+
+
         //System.out.println(form);
         // 커맨드객체 RequestJoin -> requestJoin 이름으로 속성이 추가 ->
         // 템플릿 내에서 바로 접근 가능
 
         //model.addAttribute("requestJoin",form);
 
-        return "member/join"; // response.sendRedirect(...) location: 주소
+        // redirect:/member/join = response.sendRededirect(request.getContextPath() + "/member/join")
+        // 응답해더 Location쪽에 주소(/member/join)가 추가 되는
+        //return "member/join"; // response.sendRedirect(...) location: 주소
         //return "redirect:/member/login"; // 302 -> get 주소 -> 브라우저 히스토리
+        return "forward:/member/login"; // 페이지이동이 아니고 출력버퍼가 바뀜
     }
 
     @GetMapping("/login")  // = /member/login
