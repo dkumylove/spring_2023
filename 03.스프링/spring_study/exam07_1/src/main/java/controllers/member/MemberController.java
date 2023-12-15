@@ -1,5 +1,6 @@
 package controllers.member;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import models.member.Member;
 import org.springframework.stereotype.Controller;
@@ -56,7 +57,7 @@ public class MemberController {
     }
 
     @PostMapping("/join")  // = /member/join
-    public String joinPs(RequestJoin form, Errors errors, Model model) {
+    public String joinPs(@Valid RequestJoin form, Errors errors, Model model) {
 
         joinValidator.validate(form, errors);
 

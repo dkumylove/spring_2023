@@ -55,6 +55,10 @@ dependencies {
     implementation 'org.thymeleaf.extras:thymeleaf-extras-java8time:3.0.4.RELEASE'
     implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:3.3.0'
 
+    /* Validation API */
+    implementation 'jakarta.validation:jakarta.validation-api:3.0.2'
+    implementation 'org.hibernate.validator:hibernate-validator:8.0.1.Final'
+
     /* test */
     testImplementation "org.springframework:spring-test:$spring_version"
     testImplementation platform('org.junit:junit-bom:5.10.1')
