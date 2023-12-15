@@ -1,5 +1,6 @@
 package controllers.member;
 
+import lombok.RequiredArgsConstructor;
 import models.member.Member;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,7 +14,10 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/member")
+@RequiredArgsConstructor   // 생성자를 자동으로 생성, final로 지정된 필드에 대해 생성자 생성
 public class MemberController {
+
+    private final JoinValidator joinValidator;
 
     @ModelAttribute("hobbies")
     public List<String> hobbies() {
@@ -52,9 +56,13 @@ public class MemberController {
     }
 
     @PostMapping("/join")  // = /member/join
-    public String joinPs(RequestJoin form, Model model) {
+    public String joinPs(RequestJoin form, Errors errors, Model model) {
 
+        joinValidator.validate(form, errors);
 
+        if(errors.hasErrors()){ // 검증 실패시 - 참 도출
+            return  "member/join";
+        }
 
         //System.out.println(form);
         // 커맨드객체 RequestJoin -> requestJoin 이름으로 속성이 추가 ->
