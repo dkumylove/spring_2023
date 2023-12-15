@@ -3,8 +3,7 @@ package controllers.member;
 import models.member.Member;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -12,17 +11,22 @@ import java.util.Arrays;
 import java.util.List;
 
 @Controller
+@RequestMapping("/member")
 public class MemberController {
 
-    @GetMapping("/member/join")
-    public String join(Model model) {
+    @GetMapping("/join") // = /member/join
+    //@RequestMapping(method = {RequestMethod.GET, RequestMethod.POST}, path="/member/join")
+    public String join(@ModelAttribute RequestJoin from, Model model) {
 
-        String[] addCss = {"member/style1", "member/style2"};
+        /*String[] addCss = {"member/style1", "member/style2"};
         List<String> addScript = Arrays.asList("member/script1", "member/script2");
 
         model.addAttribute("addCss", addCss);
-        model.addAttribute("addScript", addScript);
+        model.addAttribute("addScript", addScript);*/
         model.addAttribute("pageTitle", "회원가입");
+        // 겟방식일때는 데이터를 담아오지 않기 떄문에 유지되지 않음, 비어있는 것이라도 나와야 할때 새롭게 정의해서 넣음
+        //model.addAttribute("requestJoin", new RequestJoin());
+        //@ModelAttribute RequestJoin from 같은 역학을함
 
         /*
         Member member = Member.builder()
@@ -41,21 +45,25 @@ public class MemberController {
         return "member/join";
     }
 
-    @PostMapping("/member/join")
-    public String joinPs(RequestJoin form) {
-        System.out.println(form);
+    @PostMapping("/join")  // = /member/join
+    public String joinPs(RequestJoin form, Model model) {
+        //System.out.println(form);
+        // 커맨드객체 RequestJoin -> requestJoin 이름으로 속성이 추가 ->
+        // 템플릿 내에서 바로 접근 가능
+
+        //model.addAttribute("requestJoin",form);
 
         return "member/join"; // response.sendRedirect(...) location: 주소
         //return "redirect:/member/login"; // 302 -> get 주소 -> 브라우저 히스토리
     }
 
-    @GetMapping("member/login")
+    @GetMapping("/login")  // = /member/login
     public String login() {
 
         return "member/login";
     }
 
-    @PostMapping("member/login")
+    @PostMapping("/login") // = /member/login
     public String loginPs(RequestLogin form) {
 
         System.out.println("===== form : " + form);
@@ -63,7 +71,7 @@ public class MemberController {
         return "member/login";
     }
 
-    @GetMapping("/member/list")
+    @GetMapping("/list")  // = /member/list
     public String members(Model model) {
 
         List<Member> members = new ArrayList<>();
