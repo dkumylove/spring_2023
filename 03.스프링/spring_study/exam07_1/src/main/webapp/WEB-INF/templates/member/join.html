@@ -76,7 +76,6 @@
             <label for="agree" th:text="#{회원가입_약관_동의합니다.}"></label>
             <div th:each="err : ${#fields.errors('agree')}" th:text="${err}"></div>
         </div>
-
         <button type="submit" th:text="#{가입하기}"></button>
     </form>
 </main>
