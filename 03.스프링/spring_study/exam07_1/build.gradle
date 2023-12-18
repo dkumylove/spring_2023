@@ -55,7 +55,7 @@ dependencies {
     implementation 'org.thymeleaf.extras:thymeleaf-extras-java8time:3.0.4.RELEASE'
     implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:3.3.0'
 
-    /* a */
+    /* JBCrypt 유동 해시 */
     implementation 'org.mindrot:jbcrypt:0.4'
 
     /* Validation API */
