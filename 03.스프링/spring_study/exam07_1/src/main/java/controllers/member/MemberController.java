@@ -64,7 +64,7 @@ public class MemberController {
     @PostMapping("/join")  // = /member/join
     public String joinPs(@Valid RequestJoin form, Errors errors, Model model) {
 
-        //joinValidator.validate(form, errors);
+        joinValidator.validate(form, errors);
 
         if(errors.hasErrors()){ // 검증 실패시 - 참 도출
             return  "member/join";
@@ -118,7 +118,8 @@ public class MemberController {
     }
 
     /*
-    @InitBinder
+    // MemberController해당하는 공통 Validator
+    @InitBinder // @Controller나 @ControllerAdvice가 붙은 클래스는 @InitBinder가 붙은 메소드를 가질 수 있다. 이는 WebDataBinder라는 인스턴스를 초기화하는 메소드
     protected void initBinder(WebDataBinder binder) {
         binder.setValidator(joinValidator);
     }*/
