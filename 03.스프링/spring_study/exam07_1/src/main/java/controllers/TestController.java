@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 
+// 쿠키 연습을 위한
+
 @Controller
 public class TestController {
 
@@ -18,7 +20,9 @@ public class TestController {
 
         Cookie cookie2 = new Cookie("key2", "value2");
         cookie2.setPath(request.getContextPath()); // /exam07
-        cookie2.setMaxAge(60 * 60 * 24 * 7);
+        //setPath() 메서드는 쿠키의 유효 경로를 설정
+        //request.getContextPath()는 현재 웹 애플리케이션의 컨텍스트 경로를 반환하는 메서드
+        cookie2.setMaxAge(60 * 60 * 24 * 7); // 일주일간 유지(초*분*시*일) : GMT로 표시된다.
         //cookie2.setMaxAge(0); // 1970.1.1 자정 - 쿠키 삭제
         cookie2.setHttpOnly(true); // false - 자바스크립트로 브라우저에서 조회 가능
         // true - 자바스크립트 조회 X, 서버쪽에서만 요청을 통한 조회 가능
