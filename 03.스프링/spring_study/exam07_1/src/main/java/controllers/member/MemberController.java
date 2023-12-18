@@ -33,6 +33,7 @@ public class MemberController {
     @GetMapping("/join") // = /member/join
     //@RequestMapping(method = {RequestMethod.GET, RequestMethod.POST}, path="/member/join")
     public String join(@ModelAttribute RequestJoin from, Model model) {
+        // @ModelAttribute RequestJoin from : 비어있는 객체라도 보여주기위해 생성
 
         /*String[] addCss = {"member/style1", "member/style2"};
         List<String> addScript = Arrays.asList("member/script1", "member/script2");
@@ -63,6 +64,7 @@ public class MemberController {
 
     @PostMapping("/join")  // = /member/join
     public String joinPs(@Valid RequestJoin form, Errors errors, Model model) {
+        // @Valid : 들어오는 값에 대한 검증을 할수 있다.
 
         joinValidator.validate(form, errors);
 
