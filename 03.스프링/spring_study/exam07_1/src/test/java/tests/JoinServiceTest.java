@@ -27,8 +27,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 //@SpringJUnitWebConfig
 //@WebAppConfiguration
 @Transactional  // 테스트 후 자동 롤백
-@SpringJUnitConfig
-@ContextConfiguration(classes = {DbConfig.class, ControllerConfig.class})
+@SpringJUnitWebConfig
+@ContextConfiguration(classes = {MvcConfig.class, ControllerConfig.class})
 public class JoinServiceTest {
 
     @Autowired
