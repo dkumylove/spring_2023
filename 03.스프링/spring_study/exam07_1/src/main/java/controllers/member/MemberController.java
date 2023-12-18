@@ -1,11 +1,15 @@
 package controllers.member;
 
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import models.member.JoinService;
 import models.member.Member;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
@@ -19,6 +23,7 @@ import java.util.List;
 public class MemberController {
 
     private final JoinValidator joinValidator;
+    private final JoinService joinService;
 
     @ModelAttribute("hobbies")
     public List<String> hobbies() {
@@ -59,7 +64,7 @@ public class MemberController {
     @PostMapping("/join")  // = /member/join
     public String joinPs(@Valid RequestJoin form, Errors errors, Model model) {
 
-        joinValidator.validate(form, errors);
+        //joinValidator.validate(form, errors);
 
         if(errors.hasErrors()){ // 검증 실패시 - 참 도출
             return  "member/join";
@@ -111,4 +116,11 @@ public class MemberController {
 
         return  "member/list";
     }
+
+    /*
+    @InitBinder
+    protected void initBinder(WebDataBinder binder) {
+        binder.setValidator(joinValidator);
+    }*/
+
 }

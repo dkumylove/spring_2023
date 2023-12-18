@@ -1,12 +1,14 @@
 package configs;
 
 import commons.Utils;
+import lombok.RequiredArgsConstructor;
 import nz.net.ultraq.thymeleaf.layoutdialect.LayoutDialect;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.core.io.Resource;
 import org.springframework.web.servlet.config.annotation.*;
@@ -17,10 +19,24 @@ import org.thymeleaf.spring6.view.ThymeleafViewResolver;
 
 @Configuration
 @EnableWebMvc
+@Import(DbConfig.class)
+//@RequiredArgsConstructor
 public class MvcConfig implements WebMvcConfigurer {
+
+    //private final ApplicationContext applicationContext;
 
     @Autowired
     private ApplicationContext applicationContext;
+
+    /*
+    @Autowired
+    private JoinValidator joinValidator;
+
+    @Override
+    public Validator getValidator() {
+        return joinValidator;
+    }
+    */
 
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
