@@ -8,6 +8,7 @@ public class Ex06 {
         IntStream stm2 = IntStream.rangeClosed(51, 100);
 
         IntStream stm3 = IntStream.concat(stm1, stm2);
+        // concat() : 두 스트림의 연결
         int total = stm3.sum();
         System.out.println(total);
     }
