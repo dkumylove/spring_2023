@@ -30,10 +30,12 @@ public class MemberController {
         return Arrays.asList("자바", "오라클", "JSP", "스프링");
     }
 
+    // 회원가입 정보를 받아 model에 저장
     @GetMapping("/join") // = /member/join
     //@RequestMapping(method = {RequestMethod.GET, RequestMethod.POST}, path="/member/join")
     public String join(@ModelAttribute RequestJoin from, Model model) {
         // @ModelAttribute RequestJoin from : 비어있는 객체라도 보여주기위해 생성
+        // Model = 데이터 : 스프링 인터페이스
 
         /*String[] addCss = {"member/style1", "member/style2"};
         List<String> addScript = Arrays.asList("member/script1", "member/script2");
@@ -62,12 +64,14 @@ public class MemberController {
         return "/member/join";
     }
 
+    // 검증 후 회원가입처리
     @PostMapping("/join")  // = /member/join
     public String joinPs(@Valid RequestJoin form, Errors errors, Model model) {
         // @Valid : 들어오는 값에 대한 검증을 할수 있다.
 
         joinValidator.validate(form, errors);
 
+        // 검증실패시 다리 회원가입 페이지로 이동
         if(errors.hasErrors()){ // 검증 실패시 - 참 도출
             return  "member/join";
         }
@@ -81,6 +85,7 @@ public class MemberController {
 
         //model.addAttribute("requestJoin",form);
 
+        // 처리후 로그인페인지로 이동
         // redirect:/member/join = response.sendRededirect(request.getContextPath() + "/member/join")
         // 응답해더 Location쪽에 주소(/member/join)가 추가 되는
         //return "member/join"; // response.sendRedirect(...) location: 주소
