@@ -20,4 +20,16 @@
     <select id="get" resultType="models.member.Member">
         SELECT * FROM MEMBER WHERE USER_ID=#{userId}
     </select>
+
+    <!--  -->
+    <select id="getList" resultType="models.member.Member">
+        <![CDATA[
+        SELECT * FROM MEMBER
+        <where>
+            <if test="sdate != null">
+                REG_DT >= #{sdate}
+            </if>
+        </where>
+        ]]>
+    </select>
 </mapper>
