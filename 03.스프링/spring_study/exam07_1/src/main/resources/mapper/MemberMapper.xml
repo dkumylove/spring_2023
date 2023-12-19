@@ -21,7 +21,7 @@
         SELECT * FROM MEMBER WHERE USER_ID=#{userId}
     </select>
 
-    <!--  -->
+    <!-- 회원정보조회(리스트로출력) -->
     <select id="getList" resultType="models.member.Member">
         <![CDATA[
         SELECT * FROM MEMBER
@@ -29,7 +29,11 @@
             <if test="sdate != null">
                 REG_DT >= #{sdate}
             </if>
+            <if test="edate != null">
+                REG_DT < #{edate}
+            </if>
         </where>
+        ORDER BY REG_DT DESC
         ]]>
     </select>
 </mapper>

@@ -5,5 +5,14 @@
 
 <main layout:fragment="content">
     <h1 th:text="#{회원목록}"></h1>
+    <form method="get" th:action="@{/admin/member}" th:object="${memberSearch}">
+        <input type="text" name="sdate" th:field="*{sdate}">
+        <span th:each="err : ${#fields.errors('sdate')}" th:text="${err}"></span>
+        ~
+        <input type="text" name="edate" th:field="*{edate}">
+        <span th:each="err : ${#fields.errors('edate')}" th:text="${err}"></span>
+        <button type="submit"  th:text="#{조회하기}"></button>
+    </form>
+
 </main>
 </html>
