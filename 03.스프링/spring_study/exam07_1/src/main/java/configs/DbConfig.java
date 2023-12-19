@@ -8,9 +8,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @MapperScan("mapper") // mapper 패키지 내에 mapper 인터페이스를 검색하고 등록하도록 지시
+@EnableTransactionManagement  //
 public class DbConfig {
     @Bean(destroyMethod = "close")
     public DataSource dataSource() {

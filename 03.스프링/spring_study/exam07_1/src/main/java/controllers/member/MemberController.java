@@ -94,17 +94,24 @@ public class MemberController {
     }
 
     @GetMapping("/login")  // = /member/login
-    public String login() {
+    public String login(@ModelAttribute RequestLogin form) {
+
+        System.out.println(form);
 
         return "member/login";
     }
 
     @PostMapping("/login") // = /member/login
-    public String loginPs(RequestLogin form) {
+    public String loginPs(@Valid RequestLogin form, Errors errors) {
+
+        if(errors.hasErrors()){ // 검증 실패시 - 참 도출
+            return  "member/login";
+        }
 
         System.out.println("===== form : " + form);
 
-        return "member/login";
+        //return "member/login";
+        return "redirect:/"; // 로그인 성공시 메인페이지 이동
     }
 
     @GetMapping("/list")  // = /member/list
