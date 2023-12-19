@@ -20,7 +20,11 @@ public class MemberOnlyInterceptor implements HandlerInterceptor {
         }
 
         // 비회원 -> 로그인페이지로 이동
+        // 응답코드 추가 SC_UNAUTHORIZED : 401
+        response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+
         String url = request.getContextPath() + "/member/login";
+        // getContextPath() : 루트경로에 붙어있는 /exam07 : 이걸 사용하는 이유, 바뀔수도 있기 때문에 주소로 호툴하는 것임
         response.sendRedirect(url);
 
         // 로그인상태 아니면

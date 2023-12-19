@@ -44,10 +44,17 @@ public class MvcConfig implements WebMvcConfigurer {
         // MemberOnlyInterceptor 빈생성
     }
 
+    @Bean
+    public CommonInterceptor commonInterceptor(){
+        return new CommonInterceptor();
+    }
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(memberOnlyInterceptor()).addPathPatterns("/mypage/**");
         // mypage
+
+        registry.addInterceptor(commonInterceptor()).addPathPatterns("/**");
     }
 
     @Override
