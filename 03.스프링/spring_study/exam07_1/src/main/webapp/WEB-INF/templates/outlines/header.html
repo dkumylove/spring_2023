@@ -3,6 +3,7 @@
     <header th:fragment="common">
         <!-- 로그인상테일때 -->
         <th:block th:if="${@utils.isLogin()}">
+            <!-- #시작하는객체 : 타임리프의 식객체(내장객체) -->
             <span th:text="${#messages.msg('LOGIN_MSG', session.member.userNm, session.member.userId)}"></span>
             <a th:href="@{/mypage}" th:text="#{마이페이지}"></a>
             <a th:href="@{/member/logout}" th:text="#{로그아웃}"></a>

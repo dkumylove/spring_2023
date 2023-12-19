@@ -38,6 +38,18 @@ public class MvcConfig implements WebMvcConfigurer {
     }
     */
 
+    @Bean
+    public MemberOnlyInterceptor memberOnlyInterceptor() {
+        return new MemberOnlyInterceptor();
+        // MemberOnlyInterceptor 빈생성
+    }
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(memberOnlyInterceptor()).addPathPatterns("/mypage/**");
+        // mypage
+    }
+
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
@@ -57,6 +69,8 @@ public class MvcConfig implements WebMvcConfigurer {
         // 컨트롤러 없이 view 페이지로 이동
         registry.addViewController("/")
                 .setViewName("main/index");
+
+        registry.addViewController("/mypage/**").setViewName("mypage/index");
 
     }
 
