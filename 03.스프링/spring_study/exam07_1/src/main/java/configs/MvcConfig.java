@@ -64,10 +64,13 @@ public class MvcConfig implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/**")
+        registry.addResourceHandler("/**")  // 모든경로
                 .addResourceLocations("classpath:/static/");
         // 정적자원을 핸들러 할때 사용
         // "/**" Ant 경로 패턴 : 기본경로의 하위 폴더를 포함한 모든 하위 폴더
+        // 파일 업로드 경로(웹에서 조회가능)
+        registry.addResourceHandler("/upload/**")
+                .addResourceLocations("file:///C:/app/spring/uploads/");
     }
 
     @Override
