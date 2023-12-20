@@ -1,8 +1,10 @@
 package controllers.admin;
 
+import javassist.NotFoundException;
 import lombok.RequiredArgsConstructor;
 import models.member.Member;
 import models.member.MemberDao;
+import models.member.MemberNotRoundException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -40,7 +42,9 @@ public class MemberController {
     public String errorTest() {
         boolean result = true;
         if(result) {
-            throw new RuntimeException("예외발생");
+            //throw new RuntimeException("예외발생");
+            throw new MemberNotRoundException();
+
         }
 
         return  "admin/member/info";
