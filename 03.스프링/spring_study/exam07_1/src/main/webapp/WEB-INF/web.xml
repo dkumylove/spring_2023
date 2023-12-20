@@ -22,6 +22,14 @@
                 configs.ControllerConfig
             </param-value>
         </init-param>
+        <!-- 파일 업로드(MultipartFile) -->
+        <multipart-config>
+            <!-- 파일하나 최대용량 20M -->
+            <max-file-size>20971520</max-file-size>
+            <!-- 파일전체 최대용량 60M -->
+            <max-request-size>62914560</max-request-size>
+        </multipart-config>
+
     </servlet>
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
