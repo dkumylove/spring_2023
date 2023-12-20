@@ -42,9 +42,6 @@ dependencies {
     implementation 'org.mybatis:mybatis:3.5.14'
     implementation 'org.mybatis:mybatis-spring:3.0.3'
 
-    /* MyBatis TypeHandlers JSR310 */
-    implementation 'org.mybatis:mybatis-typehandlers-jsr310:1.0.2'
-
     /* log */
     implementation 'org.slf4j:slf4j-api:2.0.9'
     implementation 'ch.qos.logback:logback-classic:1.4.14'
