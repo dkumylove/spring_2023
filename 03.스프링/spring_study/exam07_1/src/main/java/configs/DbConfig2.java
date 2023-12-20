@@ -3,17 +3,21 @@ package configs;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 public class DbConfig2 {
 
     @Profile("dev")
     @Configuration
+    @MapperScan("mapper") // mapper 패키지 내에 mapper 인터페이스를 검색하고 등록하도록 지시
+    @EnableTransactionManagement
     static class DbDevConfig {
         @Bean(destroyMethod = "close")
         public DataSource dataSource() {
@@ -53,11 +57,13 @@ public class DbConfig2 {
 
     @Profile("prod")
     @Configuration
+    @MapperScan("mapper") // mapper 패키지 내에 mapper 인터페이스를 검색하고 등록하도록 지시
+    @EnableTransactionManagement
     static class DbProdConfig {
         @Bean(destroyMethod = "close")
         public DataSource dataSource() {
 
-            System.out.println("dav profile");
+            System.out.println("prod profile");
 
             DataSource ds = new DataSource();
             /* 연결 설정 */

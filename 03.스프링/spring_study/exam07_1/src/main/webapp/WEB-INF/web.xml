@@ -22,10 +22,10 @@
                 configs.ControllerConfig
             </param-value>
         </init-param>
-        <!-- dev -->
+        <!-- dev/prod profiles -->
         <init-param>
             <param-name>spring.profiles.active</param-name>
-            <param-value>dev</param-value>
+            <param-value>prod</param-value>
         </init-param>
         <!-- 파일 업로드(MultipartFile) -->
         <multipart-config>
