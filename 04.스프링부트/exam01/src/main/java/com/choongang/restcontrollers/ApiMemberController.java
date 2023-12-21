@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.IntStream;
 
-@RestController //스프링 5에 추가된 기능
+@RestController //스프링 5에 추가된 기능 Json 변환방식
 @RequestMapping("/api/member")
 public class ApiMemberController {
 
@@ -43,5 +43,18 @@ public class ApiMemberController {
                 ).toList();
 
         return  members;
+    }
+
+    @GetMapping("/message")
+    public String message() {
+        return "안녕하세요";
+    }
+
+    // 일반 컨트롤러는 반환값이 반드시 있어야한다.
+    // Rest에서는 처리하는 것만 있고 반환값이 없는 경우도 가능
+
+    @GetMapping("/process")
+    public void process() {
+        System.out.println("처리===========");
     }
 }
