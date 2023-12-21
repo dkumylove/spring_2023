@@ -1,5 +1,6 @@
 package com.choongang.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,6 +16,7 @@ public class Member {
     @Id // PrimaryKey : 기본키로 사용됨
     private Long userNo;
     private String userId;
+    @JsonIgnore // 변환 배제
     private String userPw;
     private String userNm;
     private String email;
