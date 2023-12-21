@@ -21,5 +21,6 @@ public interface MemberRepository extends CrudRepository<Member, Long> {
     @Query("SELECT * FROM MEMBER WHERE USER_NM LIKE '%:key1%' OR USER_ID LIKE '%key2%' ORDER BY REG_DT DESC")
     List<Member> getMembers(@Param("key1") String keyword1, @Param("key2") String keyword2);
 
+    // 페이징
     Page<Member> findByUserNmContaining(String key, Pageable pageable);
 }
