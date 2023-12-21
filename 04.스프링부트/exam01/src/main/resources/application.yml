@@ -1,0 +1,42 @@
+server:
+  port: 3000
+
+# 개발용
+
+spring:
+  # 프로필 설정
+  #profiles:
+  #  active: dev
+
+  # 파일 업로드 설정
+  servlet:
+    multipart:
+      maxFileSize: 20MB     # 파일한개당 최대용량
+      maxRequestSize: 60MB      # 한번에 업로드할수 있는 최대용량
+
+  # 정적 자원 설정(CSS, JS, 이미지)
+  web:
+    resources:
+      staticLocations: file:src/main/resources/static/
+
+  # 데이터베이스 설정
+  datasource:
+    driverClassName: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:myoracle
+    username: SPRING6
+    password: _aA123456
+
+  # 라이브 리로드 설정
+  devtools:
+    livereload:
+      enabled: true
+
+  # 타임리프 설정
+  thymeleaf:
+    cache: false      # 캐시가 true이면 리로드 작동 안함
+    prefix: file:src/main/resources/templates/
+
+# 파일 로딩 설정
+file:
+  url: /upload/
+  path: C:/app/spring/uploads/
