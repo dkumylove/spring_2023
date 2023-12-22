@@ -15,7 +15,7 @@ public class Stat {
     //@Scheduled(fixedDelay = 3000)  // 작업 완료 후 3초 지연
     //@Scheduled(initialDelay = 3000)  // 작업 시작전 3초 대기
     //@Scheduled(initialDelay = 3, timeUnit = TimeUnit.SECONDS)  // 작업 시작전 3초 대기
-    @Scheduled(fixedRate = 3, timeUnit = TimeUnit.SECONDS)  // 3초 지연(작업 시간 포함)
+    //@Scheduled(fixedRate = 3, timeUnit = TimeUnit.SECONDS)  // 3초 지연(작업 시간 포함)
     public void orderStatProcess() {
         log.info("주문통계진행");
 

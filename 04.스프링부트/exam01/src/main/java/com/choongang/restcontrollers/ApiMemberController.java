@@ -1,17 +1,34 @@
 package com.choongang.restcontrollers;
 
 import com.choongang.entities.Member;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.validation.Errors;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+@Slf4j
 @RestController //스프링 5에 추가된 기능 Json 변환방식
 @RequestMapping("/api/member")
 public class ApiMemberController {
+
+    @PostMapping
+    public void join(@Valid @RequestBody RequestJoin form, Errors errors) {
+
+        if(errors.hasErrors()){
+            List<String> messages = errors.getFieldErrors().stream().map(FieldError::getDefaultMessage).toList();
+            log.info("에러 : {}", messages.toString());
+
+            String message = messages.stream().collect(Collectors.joining(","));
+            throw new RuntimeException(message);
+        }
+
+    }
 
     @GetMapping
     public Member info() {
@@ -56,5 +73,11 @@ public class ApiMemberController {
     @GetMapping("/process")
     public void process() {
         System.out.println("처리===========");
+    }
+
+    @ExceptionHandler
+    public String errorHandler(Exception e) {
+
+        return e.getMessage();
     }
 }
