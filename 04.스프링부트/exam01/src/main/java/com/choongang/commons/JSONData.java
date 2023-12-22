@@ -17,4 +17,10 @@ public class JSONData<T> {
     private T data;  // 성공시 body 데이터
     private String message;  // 실패시 메시지
 
+    /* lombok을 사용하기 때문에 @NonNull을 통해
+    public JSONData(T data) {
+        this.data = data;
+    }
+    */
+
 }

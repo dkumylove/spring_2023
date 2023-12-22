@@ -1,5 +1,6 @@
 package com.choongang.restcontrollers;
 
+import com.choongang.commons.BadRequestException;
 import com.choongang.commons.JSONData;
 import com.choongang.entities.Member;
 import jakarta.validation.Valid;
@@ -21,8 +22,7 @@ import java.util.stream.IntStream;
 public class ApiMemberController {
 
     @PostMapping
-    public ResponseEntity<JSONData> join(@Valid @RequestBody RequestJoin form, Errors errors) {
-
+    public ResponseEntity<JSONData> join(@Valid @RequestBody  RequestJoin form, Errors errors) {
         if (errors.hasErrors()) {
             List<String> messages = errors.getFieldErrors()
                     .stream()
@@ -32,7 +32,8 @@ public class ApiMemberController {
 
             String message = messages.stream().collect(Collectors.joining(","));
 
-            throw new RuntimeException(message);
+            //throw new RuntimeException(message);
+            throw new BadRequestException(message);
         }
 
         // 응답 코드 - 201, body - 없음
@@ -60,10 +61,10 @@ public class ApiMemberController {
                 .modDt(LocalDateTime.now())
                 .build();
 
-        JSONData<Member> data = new JSONData<>();
-        data.setData(member);
+        //JSONData<Member> data = new JSONData<>();
+        //data.setData(member);
 
-        return data;
+        return new JSONData<>(member);
     }
 
     @GetMapping("/list")
@@ -96,10 +97,11 @@ public class ApiMemberController {
         System.out.println("처리===========");
     }
 
+    /*
     @ExceptionHandler(Exception.class)
     public ResponseEntity errorHandler(Exception e) {
 
         //return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         return ResponseEntity.badRequest().body(e.getMessage());
-    }
+    }*/
 }
