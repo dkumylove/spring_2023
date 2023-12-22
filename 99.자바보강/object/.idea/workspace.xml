@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fda2bd0-e0c5-4396-9ebc-1ceb5691f152" name="Changes" comment="231219 8교시 - 자바보강 Object">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/object.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exam01/Ex01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exam01/Ex02.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exam01/Ex03.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exam01/Ex04.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exam01/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam02/Ex01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam02/Ex02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam02/Schedule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam02/Schedule2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03.스프링/spring_study/exam07_1/src/main/java/configs/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../03.스프링/spring_study/exam07_1/src/main/java/configs/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +27,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2Zkkv2pj4SoxudrnAcmdaleBTq8" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -44,12 +39,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Ex01.executor": "Run",
+    "Application.Ex02.executor": "Run",
     "Application.Ex03.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/app/spring/99.자바보강/object",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,7 +56,33 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Ex02">
+    <configuration name="Ex01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exam02.Ex01" />
+      <module name="object" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exam02.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ex02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exam02.Ex02" />
+      <module name="object" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exam02.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Ex03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="exam01.Ex03" />
       <module name="object" />
@@ -74,6 +98,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Ex02" />
+        <item itemvalue="Application.Ex01" />
         <item itemvalue="Application.Ex03" />
       </list>
     </recent_temporary>
@@ -94,6 +120,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702973692220</updated>
       <workItem from="1702973693211" duration="3140000" />
+      <workItem from="1703146849560" duration="4014000" />
     </task>
     <task id="LOCAL-00001" summary="231219 8교시 - 자바보강 Object">
       <option name="closed" value="true" />

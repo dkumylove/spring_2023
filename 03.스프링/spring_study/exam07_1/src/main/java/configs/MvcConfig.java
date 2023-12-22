@@ -134,7 +134,6 @@ public class MvcConfig implements WebMvcConfigurer {
         ms.setDefaultEncoding("UTF-8");
         ms.setBasenames("messages.commons", "messages.validations");
 
-
         return ms;
     }
 
