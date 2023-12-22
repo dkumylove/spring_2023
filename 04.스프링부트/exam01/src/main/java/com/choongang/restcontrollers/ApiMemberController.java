@@ -1,8 +1,11 @@
 package com.choongang.restcontrollers;
 
+import com.choongang.commons.JSONData;
 import com.choongang.entities.Member;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.validation.Errors;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
@@ -18,20 +21,35 @@ import java.util.stream.IntStream;
 public class ApiMemberController {
 
     @PostMapping
-    public void join(@Valid @RequestBody RequestJoin form, Errors errors) {
+    public ResponseEntity<JSONData> join(@Valid @RequestBody RequestJoin form, Errors errors) {
 
-        if(errors.hasErrors()){
-            List<String> messages = errors.getFieldErrors().stream().map(FieldError::getDefaultMessage).toList();
+        if (errors.hasErrors()) {
+            List<String> messages = errors.getFieldErrors()
+                    .stream()
+                    .map(FieldError::getDefaultMessage)
+                    .toList();
             log.info("에러 : {}", messages.toString());
 
             String message = messages.stream().collect(Collectors.joining(","));
+
             throw new RuntimeException(message);
         }
 
+        // 응답 코드 - 201, body - 없음
+        HttpStatus status = HttpStatus.CREATED;
+        JSONData<Object> data = new JSONData<>();
+        data.setStatus(status);
+        return ResponseEntity.status(HttpStatus.CREATED).body(data);
+        /*
+        return ResponseEntity.status(HttpStatus.CREATED)
+                .header("CUSTOM_HEADER", "value1")
+                .build();
+
+         */
     }
 
     @GetMapping
-    public Member info() {
+    public JSONData<Member> info() {
         Member member = Member.builder()
                 .userNo(1L)
                 .userId("user01")
@@ -42,7 +60,10 @@ public class ApiMemberController {
                 .modDt(LocalDateTime.now())
                 .build();
 
-        return member;
+        JSONData<Member> data = new JSONData<>();
+        data.setData(member);
+
+        return data;
     }
 
     @GetMapping("/list")
@@ -75,9 +96,10 @@ public class ApiMemberController {
         System.out.println("처리===========");
     }
 
-    @ExceptionHandler
-    public String errorHandler(Exception e) {
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity errorHandler(Exception e) {
 
-        return e.getMessage();
+        //return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        return ResponseEntity.badRequest().body(e.getMessage());
     }
 }
