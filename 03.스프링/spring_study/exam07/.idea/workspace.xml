@@ -5,19 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6160fec9-002a-465e-b2b4-ecbddd0e3600" name="Changes" comment="231213 1 교시 - Thymeleaf 설정">
-      <change afterPath="$PROJECT_DIR$/../../../04.스프링부트/exam01/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../04.스프링부트/exam01/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../04.스프링부트/exam01/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../04.스프링부트/exam01/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../04.스프링부트/exam01/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../04.스프링부트/exam01/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../04.스프링부트/exam01/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../04.스프링부트/exam01/src/main/java/com/choongang/exam01/Exam01Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../04.스프링부트/exam01/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../04.스프링부트/exam01/src/test/java/com/choongang/exam01/Exam01ApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exam07_1/src/main/java/configs/DbConfig2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exam07_1/src/main/java/configs/DbConfig2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exam07_1/src/main/java/configs/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exam07_1/src/main/java/configs/MvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exam07_1/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exam07_1/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../99.자바보강/io/specs.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../99.자바보강/io/specs_copied.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../99.자바보강/io/src/exam02/Ex01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../99.자바보강/io/src/exam02/Ex02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../99.자바보강/io/src/exam02/Ex03.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,29 +67,29 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Smart Tomcat.TOMCAT10.executor&quot;: &quot;Run&quot;,
-    &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/app/spring/03.스프링/spring_study/exam07&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Gradle.Download Sources.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Smart Tomcat.TOMCAT10.executor": "Run",
+    "android.gradle.sync.needed": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/app/spring/03.스프링/spring_study/exam07",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="TOMCAT10" type="com.poratu.idea.plugins.tomcat">
       <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
