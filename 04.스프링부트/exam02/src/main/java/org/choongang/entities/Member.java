@@ -2,6 +2,9 @@ package org.choongang.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.choongang.commons.MemberType;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 
@@ -14,7 +17,20 @@ public class Member {
     private Long seq;
     private String email;
     private String name;
-    private String password;
+    private String password; // varchar2
+    //@Lob //CLOB
+    @Transient // 해당 필드 데이터베이스 매핑 무시, 엔티티 내부에서만 사용하기 위해 정의, 베제됨
+    private String introduction;
+
+    @Enumerated(EnumType.STRING)  //스트링으로 받아야함. 순서가 바뀌어도 상관없음
+    private MemberType type;
+
+    @CreationTimestamp  // insert SQL실행시
     private LocalDateTime createdAt;
+
+    @UpdateTimestamp  // update SQL실행시
     private LocalDateTime modifiedAt;
+
+    @Temporal()
+    public Date dt;
 }

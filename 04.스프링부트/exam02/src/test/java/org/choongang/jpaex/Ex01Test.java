@@ -15,7 +15,7 @@ import java.util.List;
 
 @SpringBootTest
 @Transactional
-@TestPropertySource(properties = "spring.profiles.active=test")
+@TestPropertySource(properties = "spring.profiles.active=test") // application-test.yml 파일의 설정 사용
 public class Ex01Test {
 
     @PersistenceContext  // @Autowired와 동일
