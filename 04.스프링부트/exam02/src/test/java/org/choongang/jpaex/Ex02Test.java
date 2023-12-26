@@ -1,10 +1,12 @@
 package org.choongang.jpaex;
 
+import jakarta.persistence.EntityListeners;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.choongang.entities.Member;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,7 +17,7 @@ import java.time.LocalDateTime;
 @TestPropertySource(properties = "spring.profiles.active=test") // application-test.yml 파일의 설정 사용
 public class Ex02Test {
 
-    @PersistenceContext
+    @PersistenceContext // @Autowired와 동일
     private EntityManager em;
 
     @Test
@@ -45,6 +47,30 @@ public class Ex02Test {
         em.clear();
 
         member = em.find(Member.class, member.getSeq());
+        System.out.println(member);
+    }
+
+    @Test
+    void test2() {
+        Member member = new Member();
+        member.setEmail("user01@test.org");
+        member.setName("사용자01");
+        member.setPassword("12345678");
+
+        em.persist(member);
+        em.flush();
+
+        System.out.println(member);
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        member.setName("(수정)사용자01");
+        em.flush();
+
         System.out.println(member);
     }
 }
