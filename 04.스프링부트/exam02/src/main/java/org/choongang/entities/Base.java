@@ -18,11 +18,11 @@ public abstract class Base {
 
     //@CreationTimestamp  // insert SQL실행시
     @CreatedDate
-    @Column(updatable = false)
-    private LocalDateTime createdAt;
+    @Column(updatable = false)  // 추가o, 수정x
+    private LocalDateTime createdAt;  // 처음에 값이 등록되고 이후에 변경되면 x
 
     //@UpdateTimestamp  // update SQL실행시
     @LastModifiedDate
-    @Column(insertable = false)
-    private LocalDateTime modifiedAt;
+    @Column(insertable = false)  // 추가x, 수정o
+    private LocalDateTime modifiedAt;  // 처음등록대는 등록되면 x, 이후 수정할 때 가능
 }

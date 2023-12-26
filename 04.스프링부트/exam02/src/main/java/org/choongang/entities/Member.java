@@ -21,13 +21,13 @@ public class Member extends  Base {
     @Id @GeneratedValue  // @Id : 테이블의 기본키에 사용할 속성을 지정, @GeneratedValue : 키 값을 생성하는 전략 명시(자동증감)
     private Long seq;
 
-    @Column(unique = true, nullable = false)
+    @Column(length = 80, unique = true, nullable = false)
     private String email;  // email을 아이디로 사용할것 : 중복되면 x
 
-    @Column(nullable = false)
+    @Column(length = 40, nullable = false)
     private String name;
 
-    @Column(name = "userPw", nullable = false)
+    @Column(length = 65, name = "userPw", nullable = false)
     private String password; // varchar2
 
     //@Lob //CLOB
@@ -35,6 +35,7 @@ public class Member extends  Base {
     private String introduction;
 
     @Enumerated(EnumType.STRING)  //스트링으로 받아야함. 순서가 바뀌어도 상관없음
+    @Column(length = 10)
     private MemberType type;
 
     /*
