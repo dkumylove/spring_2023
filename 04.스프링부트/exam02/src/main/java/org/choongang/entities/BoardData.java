@@ -30,4 +30,7 @@ public class BoardData extends Base{
     private LocalDateTime modifiedAt;  // 처음등록대는 등록되면 x, 이후 수정할 때 가능
      */
 
+    @ManyToOne
+    @JoinColumn(name = "userNo")
+    private Member member;
 }

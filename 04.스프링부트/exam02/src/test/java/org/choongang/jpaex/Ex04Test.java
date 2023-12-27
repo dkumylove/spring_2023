@@ -20,7 +20,7 @@ import static org.springframework.data.domain.Sort.Order.asc;
 import static org.springframework.data.domain.Sort.Order.desc;
 
 @SpringBootTest
-@TestPropertySource(properties = "spring.profiles.active=test") // application-test.yml 파일의 설정 사용
+//@TestPropertySource(properties = "spring.profiles.active=test") // application-test.yml 파일의 설정 사용
 @Transactional  // 추가했던 데이터베이스를 롤백함.
 public class Ex04Test {
 
