@@ -42,10 +42,10 @@ public class Member extends  Base {
     private MemberType type;
 
     @ToString.Exclude
-    @OneToMany(mappedBy ="member", fetch=FetchType.EAGER)
+    @OneToMany(mappedBy ="member", fetch=FetchType.LAZY)
     private List<BoardData> items = new ArrayList<>();
 
-    @OneToOne(fetch=FetchType.EAGER)
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "addressNo")
     private Address address;
 

@@ -6,6 +6,8 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -30,7 +32,10 @@ public class BoardData extends Base{
     private LocalDateTime modifiedAt;  // 처음등록대는 등록되면 x, 이후 수정할 때 가능
      */
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "userNo")
     private Member member;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    private List<HashTag> tags = new ArrayList<>();
 }

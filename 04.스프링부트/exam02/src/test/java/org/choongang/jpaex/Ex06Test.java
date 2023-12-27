@@ -1,9 +1,11 @@
 package org.choongang.jpaex;
 
+import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.choongang.entities.BoardData;
 import org.choongang.entities.Member;
+import org.choongang.entities.QBoardData;
 import org.choongang.repositories.BoardDataRepository;
 import org.choongang.repositories.MemberRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -56,7 +58,9 @@ public class Ex06Test {
     void test1() {
         BoardData data = boardDataRepository.findById(1L).orElse(null);
         Member member = data.getMember();
-        System.out.println("member = " + member);
+        String email = member.getEmail(); // 2차 쿼리 수행
+        System.out.println("email = " + email);
+        //System.out.println("member = " + member);
     }
 
     @Test
@@ -66,5 +70,34 @@ public class Ex06Test {
 //        System.out.println("member = " + member);
 //        System.out.println("items = " + items);
         items.forEach(System.out::println); // BoardData -> toString()
+    }
+
+    @Test
+    void  test3() {
+        List<BoardData> items = boardDataRepository.findAll();  //1차 쿼리 실행
+        for (BoardData item : items) {
+            Member member = item.getMember();
+            String email = member.getEmail();  //2차 쿼리 실행    // n + 1 문제
+        }
+    }
+
+    @Test
+    void test4() {
+        //List<BoardData> items = boardDataRepository.getSubjects("목");
+
+        List<BoardData> items = boardDataRepository.findBySubjectContaining("목");
+    }
+
+    @Test
+    void test05() {
+        QBoardData boardData = QBoardData.boardData;
+        JPAQueryFactory jpaQueryFactory = new JPAQueryFactory(em);
+
+        List<BoardData> items = jpaQueryFactory.selectFrom(boardData)
+                .leftJoin(boardData.member)
+                .fetchJoin()
+                .where(boardData.subject.contains("목"))
+                .fetch();
+        //items.forEach(System.out::println);
     }
 }

@@ -45,4 +45,11 @@ public class Ex07Test {
         Address address = member.getAddress();
         System.out.println("address = " + address);
     }
+
+    @Test
+    void test2() {
+        Address address = addressRepository.findById(1L).orElse(null);
+        Member member = address.getMember();
+        System.out.println("member = " + member);
+    }
 }

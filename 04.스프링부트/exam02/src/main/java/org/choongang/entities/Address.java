@@ -2,6 +2,7 @@ package org.choongang.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
 
 @Data
 @Entity
@@ -18,5 +19,9 @@ public class Address {
 
     @Column(length = 80)
     private String addr2;
+
+    @ToString.Exclude
+    @OneToOne(mappedBy = "address")
+    private Member member;
 
 }
