@@ -19,6 +19,7 @@ public class Ex02 {
             System.out.println(str);
             System.out.println(b1);
 
+
 //            Book b1 = (Book)ois.readObject();
 //            Book b2 = (Book)ois.readObject();
 //            String str = (String)ois.readObject();

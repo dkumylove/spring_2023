@@ -8,6 +8,7 @@ import java.io.IOException;
 public class Ex07 {
     public static void main(String[] args) {
 
+
         try (FileInputStream fis = new FileInputStream("data.dat");
              DataInputStream dis = new DataInputStream(fis)) {
 

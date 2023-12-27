@@ -22,6 +22,7 @@ public class Ex01 {
             data.put("book2", b2);
             data.put("str", "안녕하세요.");
 
+
             oos.writeObject(data);
 //            oos.writeObject(b1);
 //            oos.writeObject(b2);
