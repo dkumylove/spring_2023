@@ -1,5 +1,7 @@
 package org.choongang.jpaex;
 
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import org.choongang.entities.BoardData;
 import org.choongang.entities.HashTag;
 import org.choongang.repositories.BoardDataRepository;
@@ -25,6 +27,13 @@ public class Ex08Test {
     @Autowired
     private HashTagRepository hashTagRepository;
 
+    @PersistenceContext //주입 받을 필드, 메서드, 또는 생성자에 붙일 수 있다.
+    private EntityManager em;
+    // EntityManager : 영속성 컨텍스트와 관련된 작업을 수행
+    // 영속성 안에 있으면 캐시를 사용하는 것과 같은 효고가 나타남
+    // 장점도 있지만 단점도있음
+
+
     @BeforeEach
     void init() {
         List<HashTag> tags = new ArrayList<>();
@@ -44,6 +53,7 @@ public class Ex08Test {
             items.add(item);
         }
         boardDataRepository.saveAllAndFlush(items);
+        em.clear();  // 영속성 비우기
     }
 
     @Test
