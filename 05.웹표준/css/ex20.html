@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .menus > div:nth-of-type(3n+1) {
+            background: lemonchiffon;
+        }
+        .menus > div:nth-of-type(3n+2) {
+            background: lightblue;
+        }
+        .menus > div:nth-of-type(3n) {
+            background: lightcoral;
+        }
+        .menus {
+            display: flex;
+            /*flex-direction: row-reverse;*/
+            /*flex-direction: column-reverse;*/
+            /*justify-content: flex-end;*/
+            /*justify-content: center;*/
+        }
+        
+        .menus2 {
+            justify-content: space-between;
+        }
+        .menus3 {
+            justify-content: space-around;
+        }
+        .menus4 {
+            justify-content: space-evenly;
+        }
+
+    </style>
+
+    <div class="menus menus1">
+        <div>메뉴1</div>
+        <div>메뉴2</div>
+        <div>메뉴3</div>
+    </div>
+
+    <h4>space-between</h4>
+    <div class="menus menus2">
+        <div>메뉴1</div>
+        <div>메뉴2</div>
+        <div>메뉴3</div>
+    </div>
+
+    <h4>space-around</h4>
+    <div class="menus menus3">
+        <div>메뉴1</div>
+        <div>메뉴2</div>
+        <div>메뉴3</div>
+    </div>
+
+    <h4>space-evenly</h4>
+    <div class="menus menus4">
+        <div>메뉴1</div>
+        <div>메뉴2</div>
+        <div>메뉴3</div>
+    </div>
+</body>
+</html>
