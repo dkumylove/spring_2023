@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+
+            button.addEventListener("click", function() {
+                alert("클릭1");
+            });
+            button.addEventListener("click", function() {
+                alert("클릭2");
+            });
+
+            // const button = document.getElementById("button");
+            // button.onclick = function () {
+            //     alert("클릭1");  // 출력되지 않음
+            // };
+
+            // button.onclick = function () {
+            //     alert("클릭2");  // 출력됨 : 같은 함수명이기 때문에 마지막값으로 대체되기떄문에 마지막 값만 출력됨
+            // };
+        });
+    </script>
+    <button type="button" id="button">클릭</button>
+</body>
+</html>
