@@ -1,0 +1,8 @@
+{
+    "singleQuote" : true,  // "" '' = '로 통일'
+    "semi" : true,  // 자동으로 마지막에 ; 붙임
+    "trailingComma" : "all",  //자동으로 마지막에 , 붙임
+    "tab" : false,  // 탭보다는 공백으로 사용을 지향
+    "tabWidth" : 2,  // 탭 공백을 2칸으로 고정
+    "printWidth" : 80  // 
+}
