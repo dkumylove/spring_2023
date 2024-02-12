@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react';
 
 const Posts = () => {
+  //const[상태값, 상태를 바꿀수있는 메서드] = 매개변수값; 반환값 배열
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
+    setLoading(true);  //로딩중
     fetch('https://jsonplaceholder.typicode.com/posts')
       .then((res) => res.json())
       .then((posts) => {
         setItems(posts);
-        setLoading(false);
+        setLoading(false); // 로딩끝
       });
   }, []);
 

@@ -1,7 +1,7 @@
-import LoginForm from './components/LoginForm';
+import Posts from "./components/Posts";
 
 const App = () => {
-  return <LoginForm />;
+  return <Posts />;
 };
 
 export default App;
