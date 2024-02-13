@@ -16,4 +16,8 @@ public class JoinService {
         joinValidator.check(member);
 
     }
+
+    //public void join(HttpServletRequest request) {
+
+    //}
 }
