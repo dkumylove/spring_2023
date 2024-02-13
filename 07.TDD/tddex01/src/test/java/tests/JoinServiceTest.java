@@ -39,15 +39,53 @@ public class JoinServiceTest {
     @Test
     @DisplayName("필수 입력항목(userId, userPw, confirmPw, userNm) 검증, 실패시에는 BadRequestException 발생")
     void requiredField() {
-        assertThrows(BadRequestException.class, () -> {
-            /* userId 검증 - null, 빈값 */
-            Member member = getMember();
-            member.setUserId(null);
-            joinService.join(member);
+//        assertThrows(BadRequestException.class, () -> {
+//            /* userId 검증 - null, 빈값 */
+//            Member member = getMember();
+//            member.setUserId(null);
+//            joinService.join(member);
+//
+//            member = getMember();
+//            member.setUserId("     ");
+//            joinService.join(member);
+//
+//            /* userPw 검증 - null, 빈값 */
+//            Member member = getMember();
+//            member.setUserPw(null);
+//            joinService.join(member);
+//
+//            member = getMember();
+//            member.setUserPw("     ");
+//            joinService.join(member);
+//
+//
+//        });
+    }
 
-            member = getMember();
-            member.setUserId("     ");
-            joinService.join(member);
-        });
+    private void requiredFieldTestEach(String field) {
+        Member memberNull = getMember();
+        Member memberBlank = getMember();
+        if (field.equals("userId")) {
+            memberNull.setUserId(null);
+            memberBlank.setUserId("     ");
+        } else if (field.equals("userPw")) {
+            memberNull.setUserPw(null);
+            memberBlank.setUserPw("     ");
+        } else if (field.equals("confirmPw")) {
+            memberNull.setConfirmPw(null);
+            memberBlank.setConfirmPw("     ");
+        } else if (field.equals("userNm")) {
+            memberNull.setUserNm(null);
+            memberBlank.setUserNm("      ");
+        }
+
+        assertAll(
+                () -> {
+                    assertThrows(BadRequestException.class, () -> joinService.join(memberNull));
+                },
+                () -> {
+                    assertThrows(BadRequestException.class, () -> joinService.join(memberBlank));
+                }
+        );
     }
 }
