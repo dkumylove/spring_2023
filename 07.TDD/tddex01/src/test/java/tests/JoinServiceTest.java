@@ -19,8 +19,6 @@ import static org.mockito.Mockito.mock;
 @ExtendWith(MockitoExtension.class)
 public class JoinServiceTest {
 
-
-
     private JoinService joinService;
 
     @Mock
