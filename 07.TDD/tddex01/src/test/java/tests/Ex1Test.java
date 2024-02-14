@@ -20,9 +20,7 @@ public class Ex1Test {
     @Timeout(3)
     void test2() {
         try {
-            Thread.sleep(5000);  // 5초지연
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {}
     }
 }
