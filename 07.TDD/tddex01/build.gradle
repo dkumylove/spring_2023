@@ -21,6 +21,7 @@ dependencies {
 
     /* mockito */
     testImplementation 'org.mockito:mockito-core:5.10.0'
+    testImplementation 'org.mockito:mockito-junit-jupiter:5.10.0'
 
     /* test servlet */
     testCompileOnly 'jakarta.servlet:jakarta.servlet-api:6.0.0'
