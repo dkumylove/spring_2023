@@ -12,16 +12,18 @@ const LoginForm = () => {
   const countRef = useRef(1);
 
   const onSubmit = (e) => {
+    //preventDefault : 기본기능
     e.preventDefault();
 
     countRef.current++;
     console.log(countRef.current);
 
+    // 검증 에러 메시지
     try {
       for (const key in form) {
         const message =
           (key === 'userId' ? '아이디' : '비밀번호') + '를 입력하세요.';
-        if (!form[key].trim()) {
+        if (!form[key].trim()) {  // 값이 없을 때 던짐
           throw new Error(message);
         }
       }
@@ -30,6 +32,7 @@ const LoginForm = () => {
     }
   };
 
+  // 비구조할당
   const { userId, userPw } = form;
 
   const onChange = (e) => {
@@ -39,11 +42,12 @@ const LoginForm = () => {
   //let userIdEl = React.createRef();
   let userIdEl = useRef();
 
+  // 처음 한번만 로딩
   useEffect(() => {
     //userIdEl.focus();
     //console.log(userIdEl.current);
     userIdEl.current.focus();
-  }, [userIdEl]);
+  }, [userIdEl]);  //변화감지를 위해
 
   return (
     <form onSubmit={onSubmit}>
@@ -54,18 +58,18 @@ const LoginForm = () => {
             //ref={(ref) => (userIdEl = ref)}
             ref={userIdEl}
             type="text"
-            name="userId"
+            name="userId"  // 이걸통해 입력값을 일관적으로 업뎃
             onChange={onChange}
             value={userId}
           />
         </dd>
       </dl>
-      <dl>
+      <dl>ㄴ
         <dt>비밀번호</dt>
         <dd>
           <input
             type="password"
-            name="userPw"
+            name="userPw"  // 이걸통해 입력값을 일관적으로 업뎃
             onChange={onChange}
             value={userPw}
           />
